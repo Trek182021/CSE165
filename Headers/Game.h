@@ -5,7 +5,7 @@
 #include <ctime>
 #include <cstdlib>
 
-#include <SFML\Window.hpp>
+#include "SFML/System.hpp"
 #include "SFML\Window.hpp"
 #include "SFML\Graphics.hpp"
 #include "SFML\Audio.hpp"
@@ -14,11 +14,14 @@
 class Game {
 private:
     // Variables
+    sf::RenderWindow *window;
+    sf::Event sfEvent;
 
     // Intialization
     void initWindow();
 
 public:
+
     Game();
     virtual ~Game();
 
